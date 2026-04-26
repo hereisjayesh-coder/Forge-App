@@ -1,0 +1,131 @@
+.heatmap-calendar {
+   width: 100%;
+}
+
+.heatmap-scroll {
+   overflow-x: auto;
+   padding-bottom: 8px;
+}
+
+.heatmap-grid {
+   display: flex;
+   gap: 4px;
+   min-width: min-content;
+}
+
+.heatmap-day-labels {
+   display: flex;
+   flex-direction: column;
+   gap: 3px;
+   padding-top: 20px;
+}
+
+.heatmap-day-label {
+   height: 13px;
+   font-size: 0.6rem;
+   color: var(--text-muted);
+   display: flex;
+   align-items: center;
+}
+
+.heatmap-weeks-area {
+   flex: 1;
+}
+
+.heatmap-month-labels {
+   display: grid;
+   grid-auto-columns: 17px;
+   height: 16px;
+   margin-bottom: 4px;
+}
+
+.heatmap-month-label {
+   font-size: 0.6rem;
+   color: var(--text-muted);
+   white-space: nowrap;
+}
+
+.heatmap-weeks {
+   display: flex;
+   gap: 3px;
+}
+
+.heatmap-week {
+   display: flex;
+   flex-direction: column;
+   gap: 3px;
+}
+
+.heatmap-cell-wrap {
+   width: 13px;
+   height: 13px;
+}
+
+.hm-cell {
+   width: 13px;
+   height: 13px;
+   border-radius: 2px;
+   transition: all 0.1s ease;
+}
+
+.hm-cell:hover {
+   transform: scale(1.5);
+   outline: 2px solid var(--text-muted);
+   outline-offset: 1px;
+}
+
+.hm-cell.level-0 {
+   background: var(--bg-surface);
+}
+
+.hm-cell.level-1 {
+   background: #1a3a2a;
+}
+
+.hm-cell.level-2 {
+   background: #216e39;
+}
+
+.hm-cell.level-3 {
+   background: #30a14e;
+}
+
+.hm-cell.level-4 {
+   background: #40c463;
+}
+
+/* Light theme overrides */
+[data-theme="light"] .hm-cell.level-0 {
+   background: #ebedf0;
+}
+
+[data-theme="light"] .hm-cell.level-1 {
+   background: #9be9a8;
+}
+
+[data-theme="light"] .hm-cell.level-2 {
+   background: #40c463;
+}
+
+[data-theme="light"] .hm-cell.level-3 {
+   background: #30a14e;
+}
+
+[data-theme="light"] .hm-cell.level-4 {
+   background: #216e39;
+}
+
+.heatmap-legend {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+   justify-content: flex-end;
+   margin-top: 8px;
+   font-size: 0.65rem;
+   color: var(--text-muted);
+}
+
+.heatmap-legend .hm-cell {
+   width: 11px;
+   height: 11px;
+}

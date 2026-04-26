@@ -1,0 +1,131 @@
+.journal-page {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+}
+
+.journal-search {
+   position: relative;
+}
+
+.journal-search .search-icon {
+   position: absolute;
+   left: 14px;
+   top: 50%;
+   transform: translateY(-50%);
+   color: var(--text-muted);
+}
+
+.journal-search input {
+   padding-left: 42px;
+}
+
+.journal-entries {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+}
+
+.journal-entry {
+   transition: all 0.2s ease;
+}
+
+.entry-header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 12px;
+}
+
+.entry-date-mood {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+}
+
+.entry-date {
+   font-size: 0.8rem;
+   font-weight: 600;
+   color: var(--text-muted);
+}
+
+.entry-mood {
+   font-size: 0.8rem;
+   font-weight: 600;
+}
+
+.entry-content {
+   font-size: 0.95rem;
+   line-height: 1.7;
+   color: var(--text-secondary);
+   white-space: pre-wrap;
+}
+
+/* Modal */
+.journal-modal {
+   max-width: 560px;
+}
+
+.mood-picker {
+   display: flex;
+   gap: 8px;
+}
+
+.mood-option {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 4px;
+   padding: 10px 6px;
+   border-radius: var(--radius-md);
+   background: var(--bg-surface);
+   border: 2px solid var(--border-color);
+   cursor: pointer;
+   transition: all 0.15s ease;
+}
+
+.mood-option:hover {
+   background: var(--bg-surface-hover);
+}
+
+.mood-option.selected {
+   transform: scale(1.05);
+}
+
+.mood-emoji {
+   font-size: 1.4rem;
+}
+
+.mood-label {
+   font-size: 0.65rem;
+   font-weight: 600;
+   color: var(--text-muted);
+}
+
+.prompt-header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.journal-prompt {
+   font-size: 0.85rem;
+   font-style: italic;
+   color: var(--accent-primary);
+   background: rgba(139, 92, 246, 0.08);
+   padding: 10px 14px;
+   border-radius: var(--radius-md);
+   margin-bottom: 4px;
+   line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+   .mood-option {
+      padding: 8px 4px;
+   }
+
+   .mood-emoji {
+      font-size: 1.2rem;
+   }
+}

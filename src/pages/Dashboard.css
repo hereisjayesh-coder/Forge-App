@@ -1,0 +1,363 @@
+.dashboard {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+}
+
+/* Hero */
+.dashboard-hero {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+   padding: 28px;
+}
+
+.hero-greeting {
+   font-size: 0.95rem;
+   color: var(--text-secondary);
+   margin-bottom: 4px;
+}
+
+.hero-rank {
+   font-size: 1.5rem;
+   font-weight: 800;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   margin-bottom: 12px;
+}
+
+.rank-icon {
+   font-size: 1.8rem;
+}
+
+.hero-xp-bar {
+   max-width: 300px;
+}
+
+.xp-label {
+   font-size: 0.75rem;
+   color: var(--text-muted);
+   margin-top: 6px;
+   display: block;
+}
+
+.hero-streak {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 4px;
+}
+
+.streak-number {
+   font-size: 2.5rem;
+   font-weight: 900;
+   display: flex;
+   align-items: center;
+   gap: 4px;
+   color: var(--text-primary);
+}
+
+.streak-number.fire {
+   background: linear-gradient(135deg, #f97316, #ef4444);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+}
+
+.streak-flame {
+   color: #f97316;
+   animation: firePulse 1s ease infinite;
+}
+
+.streak-label {
+   font-size: 0.75rem;
+   font-weight: 600;
+   color: var(--text-muted);
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+
+/* Ghost Mode Banner */
+.ghost-mode-banner {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px 24px;
+   border: 1px solid rgba(139, 92, 246, 0.2);
+   background: rgba(139, 92, 246, 0.05);
+}
+
+.ghost-banner-left {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+}
+
+.ghost-banner-left h3 {
+   font-size: 1rem;
+   font-weight: 700;
+}
+
+.ghost-banner-left p {
+   font-size: 0.85rem;
+   color: var(--text-secondary);
+}
+
+.ghost-icon-animated {
+   color: var(--accent-primary);
+   animation: firePulse 2s ease infinite;
+}
+
+.ghost-progress-ring {
+   position: relative;
+   width: 70px;
+   height: 70px;
+}
+
+.progress-ring-svg {
+   width: 100%;
+   height: 100%;
+   transition: all 0.5s ease;
+}
+
+.ring-text {
+   position: absolute;
+   inset: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 0.8rem;
+   font-weight: 800;
+   color: var(--text-primary);
+}
+
+/* Today Section */
+.section-header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 16px;
+}
+
+.section-header h2 {
+   font-size: 1.2rem;
+   font-weight: 700;
+}
+
+.habits-today-list {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.habit-today-card {
+   display: flex;
+   align-items: center;
+   gap: 14px;
+   padding: 16px 20px;
+   background: var(--bg-card);
+   border: 1px solid var(--border-color);
+   border-radius: var(--radius-md);
+   cursor: pointer;
+   transition: all 0.2s ease;
+   text-align: left;
+   width: 100%;
+}
+
+.habit-today-card:hover {
+   background: var(--bg-card-hover);
+   border-color: var(--border-color-hover);
+   transform: translateX(4px);
+}
+
+.habit-today-card.completed {
+   border-color: rgba(34, 197, 94, 0.3);
+   background: rgba(34, 197, 94, 0.05);
+}
+
+.habit-check-icon {
+   color: var(--text-muted);
+   flex-shrink: 0;
+   transition: all 0.2s ease;
+}
+
+.habit-today-card.completed .habit-check-icon {
+   color: var(--accent-success);
+}
+
+.check-filled {
+   animation: scaleIn 0.3s ease;
+}
+
+.habit-today-icon {
+   font-size: 1.3rem;
+}
+
+.habit-today-info {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 2px;
+   min-width: 0;
+}
+
+.habit-today-name {
+   font-weight: 500;
+   font-size: 0.95rem;
+}
+
+.habit-today-name.struck {
+   text-decoration: line-through;
+   opacity: 0.6;
+}
+
+.habit-today-target {
+   font-size: 0.72rem;
+   color: var(--text-muted);
+   font-weight: 500;
+   display: flex;
+   align-items: center;
+   gap: 4px;
+}
+
+.habit-today-log {
+   font-size: 0.72rem;
+   color: var(--accent-success);
+   font-weight: 600;
+}
+
+.undo-btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 6px;
+   border: none;
+   border-radius: var(--radius-sm);
+   background: transparent;
+   color: var(--text-muted);
+   cursor: pointer;
+   transition: all var(--transition-fast);
+   flex-shrink: 0;
+}
+
+.undo-btn:hover {
+   background: rgba(239, 68, 68, 0.1);
+   color: var(--accent-danger);
+}
+
+.xp-badge {
+   font-size: 0.75rem;
+   font-weight: 700;
+   color: var(--accent-primary);
+   background: rgba(139, 92, 246, 0.1);
+   padding: 4px 8px;
+   border-radius: var(--radius-full);
+   animation: scaleIn 0.3s ease;
+   flex-shrink: 0;
+}
+
+/* Daily Challenge Card */
+.daily-challenge-card {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+   padding: 20px;
+   margin-bottom: 24px;
+   background: linear-gradient(to right, rgba(26, 26, 46, 0.8), rgba(34, 34, 64, 0.8));
+   border-left: 4px solid var(--accent-warning);
+   transition: all 0.3s ease;
+}
+
+.daily-challenge-card.completed {
+   border-left-color: var(--accent-success);
+   background: linear-gradient(to right, rgba(34, 197, 94, 0.05), rgba(34, 34, 64, 0.8));
+}
+
+.dc-icon-wrap {
+   font-size: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 50px;
+   height: 50px;
+   background: rgba(255, 255, 255, 0.05);
+   border-radius: var(--radius-md);
+   flex-shrink: 0;
+}
+
+.dc-content {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+}
+
+.dc-header {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+}
+
+.dc-badge {
+   font-size: 0.7rem;
+   font-weight: 700;
+   color: var(--accent-warning);
+   text-transform: uppercase;
+   letter-spacing: 0.5px;
+}
+
+.dc-status {
+   font-size: 0.7rem;
+   font-weight: 700;
+   color: var(--accent-success);
+   display: flex;
+   align-items: center;
+   gap: 4px;
+   animation: fadeIn 0.3s ease;
+}
+
+.daily-challenge-card h3 {
+   font-size: 1.1rem;
+   font-weight: 700;
+   color: var(--text-primary);
+}
+
+.daily-challenge-card.completed h3 {
+   text-decoration: line-through;
+   color: var(--text-muted);
+}
+
+.daily-challenge-card p {
+   font-size: 0.85rem;
+   color: var(--text-secondary);
+}
+
+.dc-reward {
+   display: flex;
+   align-items: center;
+   gap: 6px;
+   font-weight: 700;
+   color: var(--accent-primary);
+   padding: 8px 12px;
+   background: rgba(139, 92, 246, 0.1);
+   border-radius: var(--radius-md);
+   flex-shrink: 0;
+}
+
+.daily-challenge-card.completed .dc-reward {
+   color: var(--text-muted);
+   background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+   .dashboard-hero {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   .hero-xp-bar {
+      max-width: 100%;
+   }
+}

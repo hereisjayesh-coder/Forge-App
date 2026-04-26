@@ -1,0 +1,18 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Only logged in users can access the database
+    match /users/{userId} {
+      // Anyone logged in can read to support the global leaderboard
+      allow read: if request.auth != null;
+      // Users can only write/modify their own personal document
+      allow write: if request.auth != null && request.auth.uid == userId;
+      
+      // Explicitly allow users to read/write their own sub-collections (journal, completions)
+      match /{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+  }
+}

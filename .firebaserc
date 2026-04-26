@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "forge-app-273b3"
+  },
+  "targets": {
+    "forge-app-273b3": {
+      "hosting": {
+        "forge-app": [
+          "forge-app-27362"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

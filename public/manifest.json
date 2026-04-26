@@ -1,0 +1,22 @@
+{
+   "short_name": "FORGE",
+   "name": "FORGE Discipline Tracker",
+   "description": "Gamified Habit & Discipline Tracking App",
+   "icons": [
+      {
+         "src": "/icon.png",
+         "type": "image/png",
+         "sizes": "192x192"
+      },
+      {
+         "src": "/icon.png",
+         "type": "image/png",
+         "sizes": "512x512"
+      }
+   ],
+   "start_url": "/",
+   "background_color": "#0a0a0f",
+   "display": "standalone",
+   "scope": "/",
+   "theme_color": "#8b5cf6"
+}

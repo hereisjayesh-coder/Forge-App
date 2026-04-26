@@ -1,0 +1,98 @@
+.weekly-report {
+   padding: 24px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.report-header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.report-header h3 {
+   font-size: 1.1rem;
+   font-weight: 700;
+}
+
+.report-date-range {
+   font-size: 0.75rem;
+   color: var(--text-muted);
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 0.5px;
+   background: var(--bg-surface);
+   padding: 4px 10px;
+   border-radius: var(--radius-full);
+}
+
+.report-grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 16px;
+}
+
+.report-metric {
+   background: var(--bg-surface);
+   border: 1px solid var(--border-color);
+   border-radius: var(--radius-md);
+   padding: 16px;
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.metric-header {
+   display: flex;
+   align-items: center;
+   gap: 6px;
+   font-size: 0.8rem;
+   color: var(--text-secondary);
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 0.5px;
+}
+
+.metric-icon {
+   color: var(--accent-primary);
+}
+
+.metric-value {
+   font-size: 1.6rem;
+   font-weight: 800;
+   color: var(--text-primary);
+}
+
+.metric-value.text-capitalize {
+   text-transform: capitalize;
+   font-size: 1.3rem;
+   /* slightly smaller for text */
+}
+
+.metric-delta {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+   font-size: 0.75rem;
+   font-weight: 600;
+}
+
+.metric-delta.positive {
+   color: var(--accent-success);
+}
+
+.metric-delta.negative {
+   color: var(--accent-danger);
+}
+
+.metric-delta.neutral {
+   color: var(--text-muted);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+   .report-grid {
+      grid-template-columns: 1fr;
+   }
+}

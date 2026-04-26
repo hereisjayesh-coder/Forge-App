@@ -1,0 +1,264 @@
+.log-modal {
+   max-width: 450px;
+}
+
+.log-modal-title {
+   display: flex;
+   align-items: center;
+   gap: 14px;
+}
+
+.log-habit-icon {
+   width: 48px;
+   height: 48px;
+   border-radius: var(--radius-md);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 1.5rem;
+   flex-shrink: 0;
+}
+
+.log-target-badge {
+   display: inline-flex;
+   align-items: center;
+   gap: 4px;
+   font-size: 0.75rem;
+   font-weight: 600;
+   color: var(--accent-primary);
+   margin-top: 4px;
+}
+
+/* ===== STEPPER ===== */
+.stepper {
+   display: flex;
+   align-items: center;
+   gap: 0;
+   border: 1px solid var(--border-color);
+   border-radius: var(--radius-md);
+   overflow: hidden;
+   background: var(--bg-input);
+}
+
+.stepper input {
+   width: 60px;
+   text-align: center;
+   border: none;
+   border-radius: 0;
+   padding: 10px 4px;
+   font-size: 1.1rem;
+   font-weight: 700;
+   background: transparent;
+}
+
+.stepper input:focus {
+   box-shadow: none;
+}
+
+.stepper-btn {
+   width: 44px;
+   height: 44px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 1.3rem;
+   font-weight: 700;
+   color: var(--text-secondary);
+   background: var(--bg-surface);
+   transition: all var(--transition-fast);
+   border: none;
+   cursor: pointer;
+}
+
+.stepper-btn:hover {
+   background: var(--accent-primary);
+   color: white;
+}
+
+.stepper-btn.big {
+   width: 56px;
+   height: 56px;
+   border-radius: var(--radius-md);
+   font-size: 1.5rem;
+   border: 1px solid var(--border-color);
+}
+
+/* ===== EXERCISE FORM ===== */
+.log-exercise-form {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+
+.log-input-group {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.log-summary {
+   padding: 12px 16px;
+   border-radius: var(--radius-md);
+   background: rgba(139, 92, 246, 0.08);
+   border: 1px solid rgba(139, 92, 246, 0.15);
+   font-size: 0.9rem;
+   color: var(--text-secondary);
+}
+
+.log-total strong {
+   color: var(--text-primary);
+}
+
+/* ===== DURATION FORM ===== */
+.log-duration-form {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+
+.duration-slider-wrap {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+}
+
+.duration-slider {
+   flex: 1;
+   -webkit-appearance: none;
+   appearance: none;
+   height: 8px;
+   border-radius: var(--radius-full);
+   background: linear-gradient(to right, var(--accent-primary) var(--fill-pct), var(--bg-surface) var(--fill-pct));
+   outline: none;
+   border: none;
+   padding: 0;
+}
+
+.duration-slider::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   width: 22px;
+   height: 22px;
+   border-radius: 50%;
+   background: var(--accent-primary);
+   cursor: pointer;
+   box-shadow: 0 0 8px rgba(139, 92, 246, 0.4);
+}
+
+.duration-display {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   min-width: 60px;
+}
+
+.duration-value {
+   font-size: 1.8rem;
+   font-weight: 800;
+   background: var(--accent-gradient);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   line-height: 1;
+}
+
+.duration-unit {
+   font-size: 0.7rem;
+   font-weight: 600;
+   color: var(--text-muted);
+   text-transform: uppercase;
+}
+
+.duration-presets {
+   display: flex;
+   gap: 8px;
+   flex-wrap: wrap;
+}
+
+.preset-btn {
+   padding: 6px 14px;
+   border-radius: var(--radius-full);
+   font-size: 0.8rem;
+   font-weight: 600;
+   background: var(--bg-surface);
+   color: var(--text-secondary);
+   border: 1px solid var(--border-color);
+   cursor: pointer;
+   transition: all var(--transition-fast);
+}
+
+.preset-btn:hover {
+   border-color: var(--accent-primary);
+   color: var(--accent-primary);
+}
+
+.preset-btn.active {
+   background: var(--accent-primary);
+   color: white;
+   border-color: var(--accent-primary);
+}
+
+/* ===== QUANTITY FORM ===== */
+.log-quantity-form {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+
+.quantity-stepper {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 24px;
+}
+
+.quantity-display {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.quantity-value {
+   font-size: 3rem;
+   font-weight: 900;
+   background: var(--accent-gradient);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   line-height: 1;
+}
+
+.quantity-unit {
+   font-size: 0.8rem;
+   font-weight: 600;
+   color: var(--text-muted);
+   margin-top: 4px;
+}
+
+/* ===== CHECKBOX FORM ===== */
+.log-checkbox-form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 12px;
+   padding: 20px 0;
+   text-align: center;
+}
+
+.checkbox-confirm-icon {
+   font-size: 3rem;
+}
+
+.log-checkbox-form p {
+   color: var(--text-secondary);
+   font-size: 1rem;
+}
+
+/* ===== BELOW TARGET ===== */
+.below-target-badge {
+   font-size: 0.65rem;
+   background: rgba(245, 158, 11, 0.2);
+   color: #f59e0b;
+   padding: 2px 8px;
+   border-radius: var(--radius-full);
+   margin-left: 4px;
+}

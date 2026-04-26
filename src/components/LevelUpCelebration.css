@@ -1,0 +1,153 @@
+.levelup-overlay {
+   position: fixed;
+   inset: 0;
+   z-index: 99999;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: rgba(0, 0, 0, 0.85);
+   backdrop-filter: blur(8px);
+   transition: opacity 0.5s ease;
+}
+
+.levelup-enter {
+   opacity: 0;
+}
+
+.levelup-show {
+   opacity: 1;
+}
+
+.levelup-exit {
+   opacity: 0;
+   pointer-events: none;
+}
+
+.levelup-canvas {
+   position: absolute;
+   inset: 0;
+   pointer-events: none;
+}
+
+.levelup-content {
+   text-align: center;
+   z-index: 1;
+   animation: levelupContentPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+
+.levelup-label {
+   font-size: 0.85rem;
+   font-weight: 800;
+   letter-spacing: 6px;
+   text-transform: uppercase;
+   background: linear-gradient(135deg, #f59e0b, #ef4444, #8b5cf6);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   margin-bottom: 24px;
+   animation: levelupPulse 1.5s ease infinite;
+}
+
+.levelup-ranks {
+   display: flex;
+   align-items: center;
+   gap: 32px;
+   margin-bottom: 20px;
+}
+
+.levelup-old-rank,
+.levelup-new-rank {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 8px;
+}
+
+.levelup-rank-icon {
+   font-size: 3.5rem;
+   animation: levelupContentPop 0.5s ease 0.6s both;
+}
+
+.levelup-rank-icon.glow {
+   filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.6));
+   animation: levelupGlow 0.6s ease 0.8s both, levelupPulse 2s ease 1.4s infinite;
+}
+
+.levelup-rank-name {
+   font-size: 1rem;
+   font-weight: 700;
+   color: var(--text-primary);
+}
+
+.levelup-old-rank .levelup-rank-name {
+   opacity: 0.5;
+}
+
+.levelup-arrow {
+   font-size: 2rem;
+   font-weight: 900;
+   background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   animation: levelupArrow 1s ease 0.5s both;
+}
+
+.levelup-subtitle {
+   font-size: 0.85rem;
+   color: var(--text-muted);
+   font-weight: 500;
+   animation: fadeIn 0.5s ease 1.2s both;
+}
+
+@keyframes levelupContentPop {
+   from {
+      opacity: 0;
+      transform: scale(0.5);
+   }
+
+   to {
+      opacity: 1;
+      transform: scale(1);
+   }
+}
+
+@keyframes levelupGlow {
+   from {
+      opacity: 0;
+      transform: scale(0.3);
+   }
+
+   50% {
+      transform: scale(1.3);
+   }
+
+   to {
+      opacity: 1;
+      transform: scale(1);
+   }
+}
+
+@keyframes levelupArrow {
+   from {
+      opacity: 0;
+      transform: translateX(-20px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+@keyframes levelupPulse {
+
+   0%,
+   100% {
+      opacity: 1;
+   }
+
+   50% {
+      opacity: 0.7;
+   }
+}
